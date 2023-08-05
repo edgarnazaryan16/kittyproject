@@ -1,0 +1,10 @@
+.Content {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
