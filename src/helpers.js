@@ -7,3 +7,6 @@ export const sleepProject = (time = 1000) => {
         },time)
     })
 }
+export const totalCounter = (arr) => {
+    return arr.reduce((total, item) => (parseFloat(item.price) * item.count) + total, 0);
+}

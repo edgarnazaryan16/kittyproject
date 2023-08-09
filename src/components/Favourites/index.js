@@ -7,9 +7,9 @@ import Header from "../Header";
 const Favourites = () => {
     const dispatch = useDispatch();
     const {data, favouritesData} = useSelector((state) => state.kitty)
-    useEffect(() => {
-        dispatch(fetchData());
-    },[])
+    // useEffect(() => {
+    //     dispatch(fetchData());
+    // },[])
     return (
         <>
             <Header />

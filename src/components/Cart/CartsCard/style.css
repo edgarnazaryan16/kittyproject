@@ -28,6 +28,8 @@
 }
 .Cart .Card .Counter {
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 .Cart .Card button {
         background-color: darkblue;
@@ -38,4 +40,9 @@
         border-radius: 15px 15px 15px 15px;
         height: 50px;
         margin: 20px;
+}
+.Cart .Card .DeleteButton {
+    display: block;
+    margin: auto 50px auto auto;
+    padding: 0 20px;
 }

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../Header"
 import { useEffect } from "react";
-import { fetchData } from "../../store/actions/actions";
+import { fetchData, setIsLoading } from "../../store/actions/actions";
 import Card from "./Card";
 import "./style.css"
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
     const {isLoading, data} = useSelector((state) => state.kitty);
     
     useEffect(() => {
+        dispatch(setIsLoading(true));
         dispatch(fetchData());
     }, [])
     if (isLoading) {

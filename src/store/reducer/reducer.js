@@ -1,12 +1,13 @@
 const initialValue = {
     isLoading: false,
-    data: [],
+    data: (localStorage.getItem("FetchData")) ? JSON.parse(localStorage.getItem("FetchData")) : [],
     favouritesData: (localStorage.getItem("FavouritesArray")) ? JSON.parse(localStorage.getItem("FavouritesArray")) : [],
     cartData: (localStorage.getItem("CartArray")) ? JSON.parse(localStorage.getItem("CartArray")) : [],
 };
 
 export const kittyReducer = (state = initialValue, action) => {
     if (action.type === "SET_DATA") {
+        localStorage.setItem("FetchData", JSON.stringify(action.payload));
         return {
             ...state,
             data: action.payload

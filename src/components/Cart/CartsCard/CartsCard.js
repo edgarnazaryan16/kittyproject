@@ -32,17 +32,16 @@ const CartsCard = ({imgSrc, title, color, price, articul}) => {
                 </p>
                 <p>
                     Articul: {articul}
-                </p>
-                <p>
-                    Price: {price}
-                </p>               
+                </p>             
             </div>
             <div className="Counter">
+                <p>{price}$</p>  
                 <button onClick={handleDecrease}>-</button>
                 {cartData.find((item) => item.id === articul).count}
                 <button onClick={handleIncrease}>+</button>
+                <p>{price*cartData.find((item) => item.id === articul).count}$</p>
             </div>
-            <button onClick={handleDeleteItems}>Delete</button>
+            <button className="DeleteButton" onClick={handleDeleteItems}>Delete</button>
         </div>
     )
 }
